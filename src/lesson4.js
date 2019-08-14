@@ -16,17 +16,18 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <Widget update={this.update.bind(this)} />
-                <h1>{this.state.txt}</h1>
+                <Button>I <Heart /> React</Button>
             </div>
         )
     }
 }
 
-const Widget = props => 
-    <input type="text"
-           onChange={props.update}
-    />
- 
+const Button = props => <button>{props.children}</button>
 
+class Heart extends React.Component {
+    render(){
+      return <span>&hearts;</span>
+    }
+  }
+ 
 export default App;
