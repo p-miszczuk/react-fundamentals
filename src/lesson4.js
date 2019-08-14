@@ -1,3 +1,5 @@
+// problematic in JsBin
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -10,15 +12,23 @@ class App extends React.Component {
   update(){
     this.setState({val: this.state.val + 1})
   }
+  componentWillMount(){
+    console.log('componentWillMount')
+    this.setState({m: 2})
+  }
   render(){
     console.log('render');
-    return <button onClick={this.update}>{this.state.val}</button>
+    return <button onClick={this.update}>
+        {this.state.val * this.state.m}
+    </button>
   }
   componentDidMount(){
     console.log('componentDidMount')
+    this.inc = setInterval(this.update,500)
   }
   componentWillUnmount(){
     console.log('componentWillUnmount')
+    clearInterval(this.inc)
   }
 }
 
