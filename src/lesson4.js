@@ -41,3 +41,20 @@ class App extends React.Component {
 }
 
 export default App
+
+// const App = props => {
+//     return(
+//        <div>
+//          <a href="#"
+//             notrendered="x"
+//             onClick={update}>
+//             {/*this is a comment*/}
+//             this is the text
+//             {i>1 ? 'More than one' 
+//             :'one'}
+//             {i>1 && 'more than 
+//             one'}
+//             </a>
+//        </div>
+//     )
+//  }
