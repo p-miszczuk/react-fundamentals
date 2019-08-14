@@ -5,7 +5,7 @@ import './index.css';
 import App from './lesson4'
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App cat={5} txt="This is prop value"/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
